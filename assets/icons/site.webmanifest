@@ -1,0 +1,53 @@
+http-server . -p 8000 -o{
+    "name": "FindMyHorse - Global Horse Marketplace",
+    "short_name": "FindMyHorse",
+    "description": "The world's first unified equestrian marketplace connecting 50+ platforms globally",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2c5530",
+    "orientation": "portrait-primary",
+    "categories": ["business", "lifestyle", "shopping"],
+    "lang": "en-US",
+    "icons": [
+        {
+            "src": "/assets/icons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/images/screenshot-desktop.jpg",
+            "sizes": "1280x720",
+            "type": "image/jpeg",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/assets/images/screenshot-mobile.jpg",
+            "sizes": "640x1136",
+            "type": "image/jpeg",
+            "form_factor": "narrow"
+        }
+    ]
+} 
