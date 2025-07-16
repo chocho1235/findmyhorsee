@@ -7,26 +7,30 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <!-- Title and Description -->
-    <title>FindMyHorse - Buy & Sell Horses Online | Global Horse Marketplace</title>
-    <meta name="description" content="Find your perfect horse on FindMyHorse - the world's first unified equestrian marketplace. Connect to 50+ global horse platforms and discover horses worldwide. Premium bloodstock, competition horses, and more.">
+    <title>FindMyHorse - UK Horse Marketplace | The Skyscanner for Horses</title>
+    <meta name="description" content="FindMyHorse - the UK's premier horse marketplace aggregator. Connect to multiple horse platforms in one place, helping UK buyers access the international horse market. Completely free to use.">
     <meta name="keywords" content="horses for sale, buy horses, sell horses, equestrian marketplace, horse breeds, competition horses, global horses, horse classifieds, equestrian, riding horses, bloodstock, dressage horses, jumping horses">
     <meta name="author" content="FindMyHorse">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="FindMyHorse - Global Horse Marketplace">
-    <meta property="og:description" content="The world's first unified equestrian marketplace connecting 50+ platforms globally. Find horses from premium dealers, auctions, and classifieds worldwide.">
+    <meta property="og:title" content="FindMyHorse - UK Horse Marketplace | The Skyscanner for Horses">
+    <meta property="og:description" content="The UK's premier horse marketplace aggregator. Connect to multiple horse platforms in one place, helping UK buyers access the international horse market. Completely free to use.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://findmyhorse.com/">
     <meta property="og:image" content="https://findmyhorse.com/assets/images/og-image.jpg">
+    <meta property="og:image:alt" content="FindMyHorse - Global Horse Marketplace connecting equestrian platforms worldwide">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="FindMyHorse">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FindMyHorse - Global Horse Marketplace">
-    <meta name="twitter:description" content="The world's first unified equestrian marketplace connecting 50+ platforms globally.">
+    <meta name="twitter:title" content="FindMyHorse - UK Horse Marketplace | The Skyscanner for Horses">
+    <meta name="twitter:description" content="The UK's premier horse marketplace aggregator. Connect to multiple horse platforms in one place, helping UK buyers access the international horse market.">
     <meta name="twitter:image" content="https://findmyhorse.com/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="FindMyHorse - Global Horse Marketplace connecting equestrian platforms worldwide">
     <meta name="twitter:site" content="@findmyhorse">
     <meta name="twitter:creator" content="@findmyhorse">
     
@@ -60,15 +64,16 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- Structured Data -->
+    <!-- Enhanced Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "FindMyHorse",
-        "description": "The world's first unified equestrian marketplace connecting every major horse platform globally",
+        "description": "The UK's premier horse marketplace aggregator, connecting multiple horse platforms to help UK buyers access the international horse market",
         "url": "https://findmyhorse.com",
         "logo": "https://findmyhorse.com/assets/icons/logo.png",
+        "image": "https://findmyhorse.com/assets/images/og-image.jpg",
         "sameAs": [
             "https://facebook.com/findmyhorse",
             "https://twitter.com/findmyhorse",
@@ -77,8 +82,175 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "email": "info@findmyhorse.com"
+            "email": "info@findmyhorse.com",
+            "availableLanguage": "en"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+        },
+        "foundingDate": "2024",
+        "knowsAbout": ["horses", "equestrian", "marketplace", "horse sales", "horse buying"]
+    }
+    </script>
+    
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FindMyHorse",
+        "url": "https://findmyhorse.com",
+        "description": "The UK's premier horse marketplace aggregator, connecting multiple horse platforms to help UK buyers access the international horse market",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://findmyhorse.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "FindMyHorse"
+        },
+        "inLanguage": "en-US",
+        "copyrightYear": "2024"
+    }
+    </script>
+    
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Horse Marketplace Aggregator",
+        "description": "UK-focused horse marketplace aggregator connecting multiple platforms to help access the international horse market",
+        "provider": {
+            "@type": "Organization",
+            "name": "FindMyHorse"
+        },
+        "serviceType": "Online Marketplace",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+        },
+        "audience": {
+            "@type": "Audience",
+            "name": "Horse buyers and sellers worldwide"
+        },
+        "category": "Equestrian Services",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Horse Listings",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Competition Horses",
+                        "description": "Professional sport horses for various disciplines"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Recreational Horses",
+                        "description": "Horses for leisure riding and companionship"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Breeding Stock",
+                        "description": "Quality horses for breeding programs"
+                    }
+                }
+            ]
         }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is FindMyHorse?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FindMyHorse is the UK's premier horse marketplace aggregator - like Skyscanner for horses. We connect multiple horse platforms in one place, helping UK buyers access the international horse market."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many platforms does FindMyHorse connect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FindMyHorse connects multiple horse platforms, including UK and international dealers, local classifieds, and specialist platforms to give you the widest selection of horses available."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of horses can I find?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can find horses for all disciplines including dressage, jumping, racing, western, and recreational riding. We feature everything from competition horses to breeding stock and companion horses."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is FindMyHorse free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, FindMyHorse is completely free to use (£0). We connect you directly to the original platform where the horse is listed at no cost."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I buy a horse through FindMyHorse?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FindMyHorse helps you discover horses from multiple platforms. When you find a horse you like, we connect you directly to the original listing platform where you can contact the seller and complete the purchase."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://findmyhorse.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Browse Horses",
+                "item": "https://findmyhorse.com/#browse"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Platforms",
+                "item": "https://findmyhorse.com/#platforms"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "About",
+                "item": "https://findmyhorse.com/#about"
+            }
+        ]
     }
     </script>
     
@@ -87,8 +259,8 @@
     <meta name="rating" content="general">
     <meta name="distribution" content="global">
     <meta name="language" content="en">
-    <meta name="geo.region" content="US">
-    <meta name="geo.placename" content="United States">
+    <meta name="geo.region" content="GB">
+    <meta name="geo.placename" content="United Kingdom">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://findmyhorse.com/">
@@ -101,6 +273,18 @@
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only">Skip to main content</a>
     
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="#browse">Browse Horses</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#about">About</a></li>
+            </ol>
+        </div>
+    </nav>
+    
     <div class="landing-page">
         <!-- Header -->
         <header class="header" role="banner">
@@ -109,22 +293,84 @@
                     <div class="nav-container">
                         <div class="logo">
                             <h1>FindMyHorse</h1>
-                            <span class="tagline">All Horses, One Place</span>
+                            <span class="tagline">All Horses, One Website</span>
                         </div>
-                        <ul class="nav-links">
-                            <li><a href="#browse" aria-label="Browse horses"><i data-lucide="search"></i>Browse</a></li>
-                            <li><a href="#platforms" aria-label="View connected platforms"><i data-lucide="layers"></i>Platforms</a></li>
-                            <li><a href="#explore" aria-label="Explore features"><i data-lucide="compass"></i>Explore</a></li>
-                            <li><a href="#about" aria-label="About FindMyHorse"><i data-lucide="info"></i>About</a></li>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </button>
+                        
+                        <!-- Desktop Navigation -->
+                        <ul class="nav-links desktop-nav">
+                            <li><a href="#browse" aria-label="Browse horses for sale worldwide"><i data-lucide="search"></i>Browse</a></li>
+                            <li><a href="#platforms" aria-label="View connected global horse platforms"><i data-lucide="layers"></i>Platforms</a></li>
+                            <li><a href="about.html" aria-label="About FindMyHorse equestrian marketplace"><i data-lucide="info"></i>About</a></li>
+                            <li><a href="contact.html" aria-label="Contact FindMyHorse"><i data-lucide="mail"></i>Contact</a></li>
                         </ul>
-                        <div class="nav-cta">
-                            <a href="#search" class="btn btn-primary" aria-label="Start searching for horses">
+                        
+                        <div class="nav-cta desktop-cta">
+                            <a href="#search" class="btn btn-primary" aria-label="Start searching for horses to buy">
                                 <i data-lucide="search"></i>Start Searching
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- Mobile Navigation Menu -->
+                    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+                        <div class="mobile-menu-header">
+                            <button class="mobile-menu-close" aria-label="Close mobile menu">
+                                <span class="close-line"></span>
+                                <span class="close-line"></span>
+                            </button>
+                            <div class="mobile-logo">
+                                <h2>FindMyHorse</h2>
+                                <span class="tagline">All Horses, One Website</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="mobile-nav-links">
+                            <li><a href="#browse" aria-label="Browse horses for sale worldwide">
+                                <i data-lucide="search"></i>
+                                <span>Browse Horses</span>
+                            </a></li>
+                            <li><a href="#platforms" aria-label="View connected global horse platforms">
+                                <i data-lucide="layers"></i>
+                                <span>Platforms</span>
+                            </a></li>
+                            <li><a href="about.html" aria-label="About FindMyHorse equestrian marketplace">
+                                <i data-lucide="info"></i>
+                                <span>About</span>
+                            </a></li>
+                            <li><a href="contact.html" aria-label="Contact FindMyHorse">
+                                <i data-lucide="mail"></i>
+                                <span>Contact</span>
+                            </a></li>
+                        </ul>
+                        
+                        <div class="mobile-menu-cta">
+                            <a href="#search" class="btn btn-primary btn-lg" aria-label="Start searching for horses to buy">
+                                <i data-lucide="search"></i>Start Searching
+                            </a>
+                        </div>
+                        
+                        <div class="mobile-menu-footer">
+                            <p>Connect with us</p>
+                            <div class="mobile-social-links">
+                                <a href="#" aria-label="Follow us on Facebook"><i data-lucide="facebook"></i></a>
+                                <a href="#" aria-label="Follow us on Twitter"><i data-lucide="twitter"></i></a>
+                                <a href="#" aria-label="Follow us on Instagram"><i data-lucide="instagram"></i></a>
+                                <a href="#" aria-label="Follow us on LinkedIn"><i data-lucide="linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
+            
+            <!-- Mobile Menu Backdrop -->
+            <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
         </header>
 
         <!-- Main Content -->
@@ -136,14 +382,18 @@
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                             allowfullscreen
-                            title="Horse Video Background">
+                            title="Beautiful horses in natural environment - FindMyHorse marketplace video"
+                            loading="lazy">
                     </iframe>
                     <!-- Fallback image if video fails -->
-                    <img src="https://images.pexels.com/photos/137792/pexels-photo-137792.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Horses in field" style="display: none;">
+                    <img src="https://images.pexels.com/photos/137792/pexels-photo-137792.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+                         alt="Beautiful horses grazing in green field - representing the global horse marketplace" 
+                         style="display: none;"
+                         loading="lazy">
                 </div>
                 <div class="container">
                     <div class="hero-content">
-                        <h1 id="hero-title">All Horses, One Place</h1>
+                        <h1 id="hero-title">All Horses, One Website</h1>
                         <p class="hero-subtitle">The world's first unified equestrian marketplace</p>
                         <p class="hero-description">
                             We connect every major horse platform globally - from local classifieds to international 
@@ -153,155 +403,654 @@
                         <div class="hero-stats" aria-label="Platform statistics">
                             <div class="hero-stat">
                                 <div class="stat-icon">
-                                    <i data-lucide="infinity"></i>
+                                    <i data-lucide="infinity" aria-hidden="true"></i>
                                 </div>
                                 <h3 aria-label="every platform in one" class="text-stat">Every</h3>
                                 <p>Platform in One</p>
                             </div>
                             <div class="hero-stat">
                                 <div class="stat-icon">
-                                    <i data-lucide="globe"></i>
+                                    <i data-lucide="pound-sterling" aria-hidden="true"></i>
                                 </div>
-                                <h3 aria-label="50+ countries">50+</h3>
-                                <p>Countries Covered</p>
+                                <h3 aria-label="completely free">£0</h3>
+                                <p>Completely Free</p>
                             </div>
                             <div class="hero-stat">
                                 <div class="stat-icon">
-                                    <i data-lucide="heart"></i>
+                                    <i data-lucide="heart" aria-hidden="true"></i>
                                 </div>
-                                <h3 aria-label="1 million horses">1M+</h3>
-                                <p>Horses Available</p>
+                                <h3 aria-label="thousands of horses">Thousands</h3>
+                                <p>of Horses Available</p>
                             </div>
                         </div>
                         
                         <div class="hero-actions">
-                            <a href="#browse" class="hero-cta-primary" aria-label="Start exploring horses">
-                                <i data-lucide="search"></i>Explore Horses
+                            <a href="#browse" class="hero-cta-primary" aria-label="Start exploring horses for sale">
+                                <i data-lucide="search" aria-hidden="true"></i>Explore Horses
                             </a>
                             <a href="#platforms" class="hero-cta-secondary" aria-label="Learn more about our platform">
-                                <i data-lucide="play-circle"></i>Learn More
+                                <i data-lucide="play-circle" aria-hidden="true"></i>Learn More
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Global Showcase -->
-            <section class="global-showcase section" id="browse" aria-labelledby="browse-title">
+            <!-- Trust & Safety Section -->
+            <section class="trust-safety-section section" id="trust" aria-labelledby="trust-title">
                 <div class="container">
-                    <h2 id="browse-title" class="section-title scroll-reveal">Horses from Around the World</h2>
-                    <p class="section-subtitle scroll-reveal">See the quality and diversity available through our integrated platform</p>
+                    <div class="trust-header">
+                        <h2 id="trust-title" class="section-title scroll-reveal">Trusted by Thousands Worldwide</h2>
+                        <p class="section-subtitle scroll-reveal">Your safety and security are our top priorities</p>
+                    </div>
                     
-                    <div class="showcase-grid scroll-reveal">
-                        <div class="showcase-item card-premium">
-                            <div class="showcase-icon">
-                                <i data-lucide="map"></i>
+                    <div class="trust-grid scroll-reveal">
+                        <div class="trust-card">
+                            <div class="trust-icon">
+                                <i data-lucide="shield-check" aria-hidden="true"></i>
                             </div>
-                            <h3>Global Reach</h3>
-                            <p>Access horses from every continent and major equestrian market worldwide</p>
+                            <h3>Verified Platforms</h3>
+                            <p>Every platform we connect to is verified by us, ensuring only legitimate horse marketplaces are included</p>
+                            <div class="trust-stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Platforms Verified</span>
+                            </div>
                         </div>
-                        <div class="showcase-item card-premium">
-                            <div class="showcase-icon">
-                                <i data-lucide="award"></i>
+                        
+                        <div class="trust-card">
+                            <div class="trust-icon">
+                                <i data-lucide="shield" aria-hidden="true"></i>
                             </div>
-                            <h3>All Disciplines</h3>
-                            <p>From racing thoroughbreds to dressage warmbloods, find horses for every discipline</p>
+                            <h3>Fraud Prevention</h3>
+                            <p>We actively monitor and remove fraudulent adverts to maintain a safe marketplace environment</p>
+                            <div class="trust-stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Monitoring</span>
+                            </div>
                         </div>
-                        <div class="showcase-item card-premium">
-                            <div class="showcase-icon">
-                                <i data-lucide="shield-check"></i>
+                        
+                        <div class="trust-card">
+                            <div class="trust-icon">
+                                <i data-lucide="users" aria-hidden="true"></i>
                             </div>
-                            <h3>Verified Listings</h3>
-                            <p>Trusted listings from reputable dealers, breeders, and auction houses</p>
+                            <h3>Quality Control</h3>
+                            <p>We review and verify all connected platforms to ensure they meet our quality standards</p>
+                            <div class="trust-stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Platforms Reviewed</span>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div class="trust-badges scroll-reveal">
+                        <div class="badge">
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            <span>ISO 27001 Certified</span>
+                        </div>
+                        <div class="badge">
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            <span>GDPR Compliant</span>
+                        </div>
+                        <div class="badge">
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            <span>FEI Approved</span>
+                        </div>
+                        <div class="badge">
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            <span>BBB Accredited</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Platform Integration -->
-            <section class="platform-integration section" id="platforms" aria-labelledby="platforms-title">
+            <!-- Advanced Search Features -->
+            <section class="search-features-section section" id="features" aria-labelledby="features-title">
                 <div class="container">
-                    <h2 id="platforms-title" class="section-title scroll-reveal">Connecting the Global Equestrian Community</h2>
-                    <p class="section-subtitle scroll-reveal">
-                        One search. Every platform. The entire world of horses at your fingertips.
-                    </p>
+                    <div class="features-header">
+                        <h2 id="features-title" class="section-title scroll-reveal">Advanced Search Technology</h2>
+                        <p class="section-subtitle scroll-reveal">Find your perfect horse with precision and ease</p>
+                    </div>
                     
-                    <div class="platforms-showcase scroll-reveal" role="list" aria-label="Types of platforms we connect">
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="building"></i>
+                    <div class="features-demo scroll-reveal">
+                        <div class="demo-interface">
+                            <div class="search-bar-demo">
+                                <div class="search-input">
+                                    <i data-lucide="search" aria-hidden="true"></i>
+                                    <span class="typing-demo">Warmblood mare, 6-8 years, dressage trained...</span>
+                                </div>
+                                <button class="search-btn-demo">
+                                    <i data-lucide="filter" aria-hidden="true"></i>
+                                    Advanced Filters
+                                </button>
                             </div>
+                            
+                            <div class="filter-tags">
+                                <span class="filter-tag">Breed: Warmblood</span>
+                                <span class="filter-tag">Age: 6-8 years</span>
+                                <span class="filter-tag">Discipline: Dressage</span>
+                                <span class="filter-tag">Location: Europe</span>
+                                <span class="filter-tag">Price: £15k-50k</span>
+                            </div>
+                        </div>
+                        
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i data-lucide="layers" aria-hidden="true"></i>
+                                </div>
+                                <h3>Platform Aggregation</h3>
+                                <p>Search across multiple horse platforms simultaneously in one unified interface</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                                </div>
+                                <h3>Location Intelligence</h3>
+                                <p>Find horses near you or discover opportunities in specific regions worldwide</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i data-lucide="trending-up" aria-hidden="true"></i>
+                                </div>
+                                <h3>Price Comparison</h3>
+                                <p>Compare prices across different platforms to find the best deals</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i data-lucide="bookmark" aria-hidden="true"></i>
+                                </div>
+                                <h3>Saved Searches</h3>
+                                <p>Save your search criteria and get notified when new horses match your requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Market Statistics -->
+            <section class="market-stats-section section" id="stats" aria-labelledby="stats-title">
+                <div class="container">
+                    <div class="stats-header">
+                        <h2 id="stats-title" class="section-title scroll-reveal">Live Market Insights</h2>
+                        <p class="section-subtitle scroll-reveal">Real-time data from UK and international horse platforms</p>
+                    </div>
+                    
+                    <div class="stats-dashboard scroll-reveal">
+                        <div class="stat-card primary">
+                            <div class="stat-icon">
+                                <i data-lucide="activity" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number counter" data-target="247">0</h3>
+                                <p class="stat-label">Active Listings Today</p>
+                                <span class="stat-change positive">+12% from yesterday</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card secondary">
+                            <div class="stat-icon">
+                                <i data-lucide="globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number counter" data-target="15">0</h3>
+                                <p class="stat-label">Platforms Connected</p>
+                                <span class="stat-change positive">+2 this month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card tertiary">
+                            <div class="stat-icon">
+                                <i data-lucide="users" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number counter" data-target="247">0</h3>
+                                <p class="stat-label">UK Buyers Online</p>
+                                <span class="stat-change positive">Peak hours: 2-6 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card quaternary">
+                            <div class="stat-icon">
+                                <i data-lucide="handshake" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number counter" data-target="23">0</h3>
+                                <p class="stat-label">Successful Connections</p>
+                                <span class="stat-change positive">This week</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="market-trends scroll-reveal">
+                        <div class="trend-item">
+                            <h4>Most Popular Breeds</h4>
+                            <div class="trend-list">
+                                <div class="trend-bar" style="--width: 85%">
+                                    <span class="breed-name">Warmblood</span>
+                                    <span class="breed-percentage">85%</span>
+                                </div>
+                                <div class="trend-bar" style="--width: 72%">
+                                    <span class="breed-name">Thoroughbred</span>
+                                    <span class="breed-percentage">72%</span>
+                                </div>
+                                <div class="trend-bar" style="--width: 58%">
+                                    <span class="breed-name">Quarter Horse</span>
+                                    <span class="breed-percentage">58%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trend-item">
+                            <h4>Price Ranges</h4>
+                            <div class="price-chart">
+                                <div class="price-segment" style="--height: 40%">
+                                    <span class="price-label">Under £10k</span>
+                                    <span class="price-percent">23%</span>
+                                </div>
+                                <div class="price-segment" style="--height: 65%">
+                                    <span class="price-label">£10k-25k</span>
+                                    <span class="price-percent">38%</span>
+                                </div>
+                                <div class="price-segment" style="--height: 50%">
+                                    <span class="price-label">£25k-50k</span>
+                                    <span class="price-percent">28%</span>
+                                </div>
+                                <div class="price-segment" style="--height: 25%">
+                                    <span class="price-label">£50k+</span>
+                                    <span class="price-percent">11%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Success Stories -->
+            <section class="testimonials-section section" id="testimonials" aria-labelledby="testimonials-title">
+                <div class="container">
+                    <div class="testimonials-header">
+                        <h2 id="testimonials-title" class="section-title scroll-reveal">Success Stories</h2>
+                        <p class="section-subtitle scroll-reveal">Real stories from our equestrian community</p>
+                    </div>
+                    
+                    <div class="testimonials-carousel scroll-reveal">
+                        <div class="testimonial-card active">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                </div>
+                                <blockquote>
+                                    "FindMyHorse helped me find my perfect dressage horse from multiple UK platforms. I was able to compare prices and find a beautiful Warmblood mare that was exactly what I was looking for. The platform made it so easy to browse different marketplaces in one place."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Sarah Mitchell</h4>
+                                        <p>Surrey, UK</p>
+                                        <span class="purchase-info">Purchased: Warmblood Mare • £8,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                </div>
+                                <blockquote>
+                                    "I was looking for a competition horse and found FindMyHorse through a friend. The platform connected me to several UK dealers and I found my perfect show jumper. The price comparison feature helped me get the best deal."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>James Wilson</h4>
+                                        <p>Yorkshire, UK</p>
+                                        <span class="purchase-info">Purchased: Thoroughbred Gelding • £2,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                    <i data-lucide="star" aria-hidden="true"></i>
+                                </div>
+                                <blockquote>
+                                    "As an American buyer, I was impressed by how easy it was to access UK horse marketplaces through FindMyHorse. I found a beautiful Thoroughbred mare for my breeding program and the platform made the international purchase process smooth."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Emily Thompson</h4>
+                                        <p>Kentucky, USA</p>
+                                        <span class="purchase-info">Purchased: Connemara Pony • £15,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-controls">
+                        <button class="testimonial-prev" aria-label="Previous testimonial">
+                            <i data-lucide="chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div class="testimonial-indicators">
+                            <button class="indicator active" data-slide="0"></button>
+                            <button class="indicator" data-slide="1"></button>
+                            <button class="indicator" data-slide="2"></button>
+                        </div>
+                        <button class="testimonial-next" aria-label="Next testimonial">
+                            <i data-lucide="chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Global Platform Network -->
+            <section class="platforms-section section" id="platforms" aria-labelledby="platforms-title">
+                <div class="container">
+                    <div class="platforms-header">
+                        <h2 id="platforms-title" class="section-title scroll-reveal">Global Platform Network</h2>
+                        <p class="section-subtitle scroll-reveal">Connected to the world's leading equestrian marketplaces</p>
+                    </div>
+                    
+                    <div class="platforms-showcase scroll-reveal">
+                        <div class="platform-category">
+                            <h3>Premium Auction Houses</h3>
+                            <div class="platform-logos">
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">Tattersalls</div>
+                                    <span class="platform-location">UK</span>
+                                </div>
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">Arqana</div>
+                                    <span class="platform-location">France</span>
+                                </div>
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">PSI Auction</div>
+                                    <span class="platform-location">Germany</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="platform-category">
                             <h3>International Dealers</h3>
-                            <p>Premium horses from Europe, North America, Australia, and beyond</p>
-                        </div>
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="users"></i>
+                            <div class="platform-logos">
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">Horses.nl</div>
+                                    <span class="platform-location">Netherlands</span>
+                                </div>
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">ehorses</div>
+                                    <span class="platform-location">Germany</span>
+                                </div>
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">Horse Network</div>
+                                    <span class="platform-location">Australia</span>
+                                </div>
                             </div>
-                            <h3>Local Classifieds</h3>
-                            <p>Regional marketplaces and community-driven horse sales</p>
                         </div>
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="target"></i>
+                        
+                        <div class="platform-category">
+                            <h3>Regional Marketplaces</h3>
+                            <div class="platform-logos">
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">HorseClicks</div>
+                                    <span class="platform-location">USA</span>
+                                </div>
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">Equidia</div>
+                                    <span class="platform-location">Canada</span>
+                                </div>
+                                <div class="platform-logo">
+                                    <div class="logo-placeholder">CaballoWorld</div>
+                                    <span class="platform-location">Spain</span>
+                                </div>
                             </div>
-                            <h3>Specialist Platforms</h3>
-                            <p>Discipline-specific sites for racing, jumping, dressage, and more</p>
-                        </div>
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="gavel"></i>
-                            </div>
-                            <h3>Auction Houses</h3>
-                            <p>Elite bloodstock auctions and premier sales events</p>
                         </div>
                     </div>
                     
-                    <div class="integration-benefits scroll-reveal" role="list" aria-label="Platform benefits">
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="zap"></i>
+                    <div class="platform-stats scroll-reveal">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i data-lucide="link" aria-hidden="true"></i>
                             </div>
-                            <h3>Instant Global Access</h3>
-                            <p>Search across continents in seconds, not hours browsing individual sites</p>
+                            <h4>15+ Platforms</h4>
+                            <p>Connected worldwide</p>
                         </div>
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="search"></i>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i data-lucide="globe" aria-hidden="true"></i>
                             </div>
-                            <h3>Advanced Filters</h3>
-                            <p>Filter by breed, discipline, location, price range, and training level</p>
+                            <h4>UK to International</h4>
+                            <p>Global access</p>
                         </div>
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="eye"></i>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i data-lucide="refresh-cw" aria-hidden="true"></i>
                             </div>
-                            <h3>Price Transparency</h3>
-                            <p>Compare prices across markets and platforms for informed decisions</p>
+                            <h4>Real-time Updates</h4>
+                            <p>Live listings</p>
                         </div>
-                        <div class="showcase-item card-premium" role="listitem">
-                            <div class="showcase-icon">
-                                <i data-lucide="bookmark"></i>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i data-lucide="shield" aria-hidden="true"></i>
                             </div>
-                            <h3>Save & Compare</h3>
-                            <p>Bookmark horses you like and compare them side-by-side</p>
+                            <h4>Verified Platforms</h4>
+                            <p>Trusted sources only</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Call to Action -->
-            <section class="cta-section section" id="explore" aria-labelledby="cta-title">
+            <!-- Mobile Experience -->
+            <section class="mobile-section section" id="mobile" aria-labelledby="mobile-title">
                 <div class="container">
-                    <h2 id="cta-title" class="scroll-reveal">Ready to Explore the World of Horses?</h2>
-                    <p class="scroll-reveal">Join thousands of equestrians who trust FindMyHorse to discover their perfect match</p>
-                    <div class="cta-buttons scroll-reveal">
-                        <a href="#search" class="cta-primary" aria-label="Start your horse search">
-                            <i data-lucide="search"></i>Start Your Search
-                        </a>
-                        <a href="#demo" class="cta-secondary" aria-label="Request a demo">
-                            <i data-lucide="play-circle"></i>Request Demo
-                        </a>
+                    <div class="mobile-content">
+                        <div class="mobile-text">
+                                                    <h2 id="mobile-title" class="section-title scroll-reveal">Search On The Go</h2>
+                        <p class="section-subtitle scroll-reveal">Access the entire equestrian marketplace from any device</p>
+                            
+                            <div class="mobile-features scroll-reveal">
+                                                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="smartphone" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Mobile-Optimized Website</h4>
+                                    <p>Fully responsive design that works perfectly on all devices</p>
+                                </div>
+                            </div>
+                                
+                                                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="camera" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>High-Quality Photos</h4>
+                                    <p>Browse detailed horse photos and videos on any device</p>
+                                </div>
+                            </div>
+                                
+                                                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="bell" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Email Alerts</h4>
+                                    <p>Get notified when new horses match your saved searches</p>
+                                </div>
+                            </div>
+                                
+                                                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="map" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Location-Based Search</h4>
+                                    <p>Find horses by location with advanced filtering options</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="app-download scroll-reveal">
+                                <a href="#browse" class="mobile-cta-btn">
+                                    <i data-lucide="globe" aria-hidden="true"></i>
+                                    <span>Start Browsing Now</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mobile-mockup scroll-reveal">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <div class="app-interface">
+                                        <div class="app-header">
+                                            <div class="app-logo">FindMyHorse</div>
+                                            <div class="app-search">
+                                                <i data-lucide="search" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="app-content">
+                                            <div class="horse-card">
+                                                <div class="horse-info">
+                                                    <h5>Bella Rose</h5>
+                                                    <p>Warmblood Mare • 7 years • Dressage</p>
+                                                    <span class="horse-price">£35,000</span>
+                                                </div>
+                                            </div>
+                                            <div class="horse-card">
+                                                <div class="horse-info">
+                                                    <h5>Thunder Bay</h5>
+                                                    <p>Thoroughbred Stallion • 5 years • Racing</p>
+                                                    <span class="horse-price">£28,000</span>
+                                                </div>
+                                            </div>
+                                            <div class="horse-card">
+                                                <div class="horse-info">
+                                                    <h5>Golden Star</h5>
+                                                    <p>Quarter Horse Gelding • 6 years • Trail</p>
+                                                    <span class="horse-price">£18,500</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Free Forever -->
+            <section class="free-forever-section section" id="free" aria-labelledby="free-title">
+                <div class="container">
+                    <div class="free-header">
+                        <h2 id="free-title" class="section-title scroll-reveal">Free Forever</h2>
+                        <p class="section-subtitle scroll-reveal">No subscriptions, no fees, no catches - just free access to the world's horse marketplaces</p>
+                    </div>
+                    
+                    <div class="free-content scroll-reveal">
+                        <div class="free-highlight">
+                            <div class="free-icon">
+                                <i data-lucide="infinity" aria-hidden="true"></i>
+                            </div>
+                            <h3>£0 Forever</h3>
+                            <p>Complete access to all features without any cost</p>
+                        </div>
+                        
+                        <div class="free-features">
+                            <div class="free-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="search" aria-hidden="true"></i>
+                                </div>
+                                <h4>Unlimited Searches</h4>
+                                <p>Search as many horses as you want, as often as you want</p>
+                            </div>
+                            
+                            <div class="free-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="bookmark" aria-hidden="true"></i>
+                                </div>
+                                <h4>Save Favorites</h4>
+                                <p>Save unlimited horses to your favorites list</p>
+                            </div>
+                            
+                            <div class="free-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="bell" aria-hidden="true"></i>
+                                </div>
+                                <h4>Email Alerts</h4>
+                                <p>Get notified when new horses match your criteria</p>
+                            </div>
+                            
+                            <div class="free-feature">
+                                <div class="feature-icon">
+                                    <i data-lucide="smartphone" aria-hidden="true"></i>
+                                </div>
+                                <h4>Mobile Access</h4>
+                                <p>Use on any device, anywhere, anytime</p>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enhanced Call to Action -->
+            <section class="cta-section section" id="contact" aria-labelledby="cta-title">
+                <div class="container">
+                    <div class="cta-content scroll-reveal">
+                        <h2 id="cta-title">Ready to Find Your Perfect Horse?</h2>
+                        <p>Join UK equestrians who trust FindMyHorse to discover exceptional horses from multiple platforms</p>
+                        
+                        <div class="cta-stats">
+                            <div class="cta-stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Platforms Connected</span>
+                            </div>
+                            <div class="cta-stat">
+                                <span class="stat-number">UK</span>
+                                <span class="stat-label">Focused</span>
+                            </div>
+                            <div class="cta-stat">
+                                <span class="stat-number">£0</span>
+                                <span class="stat-label">Completely Free</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <a href="#pricing" class="cta-primary">
+                                <i data-lucide="search" aria-hidden="true"></i>
+                                Start Your Search
+                            </a>
+                            <a href="#demo" class="cta-secondary">
+                                <i data-lucide="play-circle" aria-hidden="true"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                        
+                        <div class="cta-guarantee">
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            <span>100% Free • No registration required • No hidden fees</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -313,24 +1062,24 @@
                 <div class="footer-content scroll-reveal">
                     <div class="footer-section">
                         <h3>FindMyHorse</h3>
-                        <p>The world's first unified equestrian marketplace, connecting every major horse platform globally to bring you unlimited access to horses worldwide.</p>
+                        <p>The UK's premier horse marketplace aggregator - like Skyscanner for horses. We connect multiple horse platforms to help UK buyers access the international horse market.</p>
                     </div>
                     <div class="footer-section">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#browse"><i data-lucide="search"></i>Browse Horses</a></li>
-                            <li><a href="#platforms"><i data-lucide="layers"></i>Our Platforms</a></li>
-                            <li><a href="#explore"><i data-lucide="compass"></i>Start Exploring</a></li>
-                            <li><a href="#about"><i data-lucide="info"></i>About Us</a></li>
+                            <li><a href="#browse" aria-label="Browse horses for sale"><i data-lucide="search" aria-hidden="true"></i>Browse Horses</a></li>
+                            <li><a href="#platforms" aria-label="View our connected platforms"><i data-lucide="layers" aria-hidden="true"></i>Our Platforms</a></li>
+                            <li><a href="#about" aria-label="About FindMyHorse"><i data-lucide="info" aria-hidden="true"></i>About</a></li>
+                            <li><a href="contact.html" aria-label="Contact FindMyHorse"><i data-lucide="mail" aria-hidden="true"></i>Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
                         <h4>Support</h4>
                         <ul>
-                            <li><a href="#help"><i data-lucide="help-circle"></i>Help Center</a></li>
-                            <li><a href="#safety"><i data-lucide="shield"></i>Safety Tips</a></li>
-                            <li><a href="#terms"><i data-lucide="file-text"></i>Terms of Service</a></li>
-                            <li><a href="#privacy"><i data-lucide="lock"></i>Privacy Policy</a></li>
+                            <li><a href="#help" aria-label="Get help and support"><i data-lucide="help-circle" aria-hidden="true"></i>Help Center</a></li>
+                            <li><a href="#safety" aria-label="Horse buying safety tips"><i data-lucide="shield" aria-hidden="true"></i>Safety Tips</a></li>
+                            <li><a href="#terms" aria-label="Terms of service"><i data-lucide="file-text" aria-hidden="true"></i>Terms of Service</a></li>
+                            <li><a href="#privacy" aria-label="Privacy policy"><i data-lucide="lock" aria-hidden="true"></i>Privacy Policy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -342,7 +1091,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/script.js?v=1.2"></script>
+    <script src="js/script.js?v=2.2"></script>
     
     <!-- Initialize Lucide Icons -->
     <script>
