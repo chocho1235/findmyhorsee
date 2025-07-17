@@ -101,14 +101,37 @@ function smoothScrollTo(element, duration = 800) {
 function initScrollAnimations() {
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: '50px',
         threshold: CONFIG.INTERSECTION_THRESHOLD
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Add a small delay to prevent flickering
+                requestAnimationFrame(() => {
                 entry.target.classList.add('revealed');
+                    
+                    // Special handling for trust section
+                    if (entry.target.closest('.trust-safety-section')) {
+                        const trustCards = entry.target.querySelectorAll('.trust-card');
+                        const badges = entry.target.querySelectorAll('.badge');
+                        
+                        // Animate trust cards with staggered delays
+                        trustCards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.classList.add('revealed');
+                            }, 400 + (index * 100));
+                        });
+                        
+                        // Animate badges with staggered delays
+                        badges.forEach((badge, index) => {
+                            setTimeout(() => {
+                                badge.classList.add('revealed');
+                            }, 600 + (index * 100));
+                        });
+                    }
+                });
                 observer.unobserve(entry.target);
             }
         });
@@ -117,6 +140,8 @@ function initScrollAnimations() {
     // Observe all scroll reveal elements
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     scrollRevealElements.forEach(element => {
+        // Ensure elements start hidden
+        element.classList.remove('revealed');
         observer.observe(element);
     });
 }
@@ -396,7 +421,7 @@ function initMobileMenu() {
             e.preventDefault();
             e.stopPropagation();
             closeMobileMenu();
-        });
+    });
     }
     
     // Close menu when clicking on backdrop
@@ -1267,8 +1292,8 @@ function init() {
     }
     
     // Core functionality
-    initScrollAnimations();
-    initScrollProgressIndicator();
+        initScrollAnimations();
+        initScrollProgressIndicator();
     initHeaderEffects();
     initSmoothNavigation();
     initCardHoverEffects();

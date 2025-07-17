@@ -677,15 +677,7 @@ body {
 }
 
 .nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -var(--space-4);
-    left: 50%;
-    transform: translateX(-50%);
-    width: var(--space-4);
-    height: 2px;
-    background: var(--primary-600);
-    border-radius: var(--radius-full);
+    content: none;
 }
 
 .nav-cta {
@@ -1546,11 +1538,48 @@ body {
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: var(--space-8);
     border-top: 1px solid var(--neutral-200);
+    padding-top: var(--space-6);
+    margin-top: var(--space-8);
+    text-align: center;
     color: var(--neutral-600);
     font-size: var(--text-sm);
+}
+
+.powered-by {
+    margin-top: var(--space-4);
+    padding: var(--space-3) var(--space-6);
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+    border-radius: var(--radius-xl);
+    display: inline-block;
+    border: 1px solid var(--primary-200);
+    transition: all var(--transition-normal);
+}
+
+.powered-by:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+}
+
+.powered-by a {
+    color: var(--primary-700);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--text-lg);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: color var(--transition-normal);
+}
+
+.powered-by a:hover {
+    color: var(--primary-800);
+}
+
+.powered-by strong {
+    color: var(--primary-800);
+    font-weight: var(--font-weight-bold);
 }
 
 /* ==========================================
@@ -1561,11 +1590,280 @@ body {
     opacity: 0;
     transform: translateY(24px);
     transition: all var(--transition-slowest);
+    will-change: opacity, transform;
 }
 
 .scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Prevent flash of unstyled content */
+.scroll-reveal:not(.revealed) {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.scroll-reveal.revealed {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure smooth transitions */
+.scroll-reveal {
+    transition: opacity var(--transition-slowest), 
+                transform var(--transition-slowest), 
+                visibility 0s;
+}
+
+.scroll-reveal.revealed {
+    transition: opacity var(--transition-slowest), 
+                transform var(--transition-slowest), 
+                visibility 0s;
+}
+
+/* Trust Section Animation Overhaul */
+.trust-safety-section .scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trust-safety-section .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for trust elements */
+.trust-safety-section .trust-header .scroll-reveal {
+    transition-delay: 0.1s;
+}
+
+.trust-safety-section .trust-grid.scroll-reveal {
+    transition-delay: 0.3s;
+}
+
+.trust-safety-section .trust-badges.scroll-reveal {
+    transition-delay: 0.5s;
+}
+
+/* Individual trust card animations */
+.trust-safety-section .trust-card {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0.4s;
+}
+
+.trust-safety-section .trust-grid.revealed .trust-card {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Stagger individual cards */
+.trust-safety-section .trust-card:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.trust-safety-section .trust-card:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.trust-safety-section .trust-card:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+/* Badge animations */
+.trust-safety-section .badge {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trust-safety-section .trust-badges.revealed .badge {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Stagger badges */
+.trust-safety-section .badge:nth-child(1) {
+    transition-delay: 0.6s;
+}
+
+.trust-safety-section .badge:nth-child(2) {
+    transition-delay: 0.7s;
+}
+
+.trust-safety-section .badge:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.trust-safety-section .badge:nth-child(4) {
+    transition-delay: 0.9s;
+}
+
+/* Enhanced trust card hover effects */
+.trust-safety-section .trust-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.trust-safety-section .trust-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(34, 197, 94, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.trust-safety-section .trust-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-400), var(--primary-300), var(--primary-400));
+    background-size: 200% 100%;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.trust-safety-section .trust-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Trust icon animations */
+.trust-safety-section .trust-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.trust-safety-section .trust-card.revealed .trust-icon {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.trust-safety-section .trust-card:hover .trust-icon {
+    transform: scale(1.1);
+    box-shadow: 
+        0 8px 16px rgba(34, 197, 94, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text animations */
+.trust-safety-section .trust-card h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--neutral-800);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.trust-safety-section .trust-card.revealed h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.trust-safety-section .trust-card p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.trust-safety-section .trust-card.revealed p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Stat animations */
+.trust-safety-section .trust-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.trust-safety-section .trust-card.revealed .trust-stat {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.trust-safety-section .stat-number {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--primary-600);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trust-safety-section .trust-card:hover .stat-number {
+    color: var(--primary-700);
+    transform: scale(1.05);
+}
+
+/* Badge hover effects */
+.trust-safety-section .badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--neutral-700);
+    border: 1px solid var(--neutral-200);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trust-safety-section .badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 8px 16px rgba(34, 197, 94, 0.15),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-300);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(34, 197, 94, 0.1));
+}
+
+.trust-safety-section .badge i {
+    color: var(--primary-600);
+    font-size: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trust-safety-section .badge:hover i {
+    color: var(--primary-700);
+    transform: scale(1.1);
 }
 
 /* ==========================================
@@ -2308,8 +2606,15 @@ body {
 .hero-stat,
 .showcase-item,
 .stat-icon,
-.showcase-icon {
-    will-change: transform;
+.showcase-icon,
+.access-feature,
+.feature-item,
+.benefit-card,
+.highlight-item {
+    will-change: transform, box-shadow;
+    transition-property: transform, box-shadow, background, border-color, color, opacity;
+    transition-duration: 120ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reduce motion for accessibility */
@@ -2500,6 +2805,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    will-change: transform, box-shadow;
 }
 
 .trust-card::before {
@@ -5090,6 +5396,12 @@ body {
     z-index: 1;
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
 }
 
 .about-hero-content h1 {
@@ -6356,4 +6668,470 @@ body {
     box-shadow: 
         0 12px 24px rgba(34, 197, 94, 0.4),
         0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Why Choose FindMyHorse Section */
+.why-choose-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="why-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(34, 197, 94, 0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23why-pattern)"/></svg>');
+    opacity: 0.5;
+}
+
+.why-choose-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid var(--neutral-200);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.benefit-card.primary::before {
+    background: var(--gradient-primary);
+}
+
+.benefit-card.secondary::before {
+    background: var(--gradient-accent);
+}
+
+.benefit-card.tertiary::before {
+    background: var(--gradient-earth);
+}
+
+.benefit-card.quaternary::before {
+    background: linear-gradient(90deg, var(--primary-400), var(--accent-400));
+}
+
+.benefit-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(34, 197, 94, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.benefit-card:hover::before {
+    transform: scaleX(1);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.75rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 8px 16px rgba(34, 197, 94, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card.primary .benefit-icon {
+    background: var(--gradient-primary);
+}
+
+.benefit-card.secondary .benefit-icon {
+    background: var(--gradient-accent);
+}
+
+.benefit-card.tertiary .benefit-icon {
+    background: var(--gradient-earth);
+}
+
+.benefit-card.quaternary .benefit-icon {
+    background: linear-gradient(135deg, var(--primary-400), var(--accent-400));
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
+    box-shadow: 
+        0 12px 24px rgba(34, 197, 94, 0.4),
+        0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-content h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--neutral-800);
+    text-align: center;
+}
+
+.benefit-content p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.benefit-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--neutral-50);
+    border-radius: 1rem;
+    border: 1px solid var(--neutral-200);
+}
+
+.benefit-stat .stat-number {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--primary-600);
+}
+
+.benefit-stat .stat-label {
+    font-size: var(--text-sm);
+    color: var(--neutral-500);
+    font-weight: 500;
+}
+
+.feature-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid var(--neutral-200);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-300);
+}
+
+.highlight-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover .highlight-icon {
+    transform: scale(1.1);
+    box-shadow: 
+        0 8px 16px rgba(34, 197, 94, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-content h4 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--neutral-800);
+}
+
+.highlight-content p {
+    color: var(--neutral-600);
+    line-height: 1.5;
+    font-size: var(--text-sm);
+}
+
+/* Responsive styles for why-choose section */
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefit-card {
+        padding: 2rem;
+    }
+    
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .feature-highlights {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .highlight-item {
+        padding: 1.25rem;
+    }
+}
+
+.story-quote blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.story-quote blockquote p {
+    font-size: var(--text-xl);
+    color: var(--neutral-700);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+}
+
+.story-quote blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.story-quote blockquote p:first-child::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary-400);
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    font-family: serif;
+}
+
+.quote-author {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.quote-author .author-name {
+    display: block;
+    font-weight: 600;
+    color: var(--neutral-900);
+    font-size: var(--text-lg);
+}
+
+.quote-author .author-title {
+    display: block;
+    color: var(--neutral-600);
+    font-size: var(--text-sm);
+    margin-top: 0.25rem;
+}
+
+.story-quote blockquote p:first-child::before {
+    content: none;
+}
+
+.team-story {
+    margin-top: 3.5rem;
+}
+
+.early-access-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.early-access-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="early-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(34, 197, 94, 0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23early-pattern)"/></svg>');
+    opacity: 0.5;
+}
+
+.early-access-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.early-access-header .section-title {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    color: var(--neutral-800);
+    margin-bottom: 1rem;
+}
+
+.early-access-header .section-subtitle {
+    font-size: var(--text-xl);
+    color: var(--neutral-600);
+    margin-bottom: 0;
+}
+
+.early-access-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.access-feature {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+    width: 300px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--neutral-200);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.access-feature:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(34, 197, 94, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.access-feature .feature-icon {
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.75rem;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 8px 16px rgba(34, 197, 94, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.access-feature:hover .feature-icon {
+    transform: scale(1.1);
+    box-shadow: 
+        0 12px 24px rgba(34, 197, 94, 0.4),
+        0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.access-feature h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--neutral-800);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.access-feature p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.early-access-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.early-access-stats .stat-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--neutral-200);
+}
+
+.early-access-stats .stat-icon {
+    font-size: 1.8rem;
+    color: var(--primary-500);
+    margin-bottom: 0.5rem;
+}
+
+.early-access-stats h4 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--neutral-800);
+    margin-bottom: 0.25rem;
+}
+
+.early-access-stats p {
+    color: var(--neutral-600);
+    font-size: var(--text-sm);
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .early-access-showcase {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .early-access-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
 }

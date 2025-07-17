@@ -1,37 +1,76 @@
+# FindMyHorse - The Premier UK Horse Marketplace
+# Robots.txt file for horses for sale, warmblood for sale, cob for sale uk, thoroughbred for sale
+
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://findmyhorse.com/sitemap.xml
-
-# Crawl delay for polite crawling
-Crawl-delay: 1
-
-# Disallow admin areas (if they exist in the future)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-
-# Allow all images
-Allow: /assets/images/
-Allow: /assets/icons/
-
-# Allow CSS and JS
-Allow: /css/
-Allow: /js/
-
-# Common user agents
+# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: Slurp
 Allow: /
 
-User-agent: Twitterbot
+User-agent: DuckDuckBot
 Allow: /
 
-User-agent: LinkedInBot
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
 Allow: / 
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+
+# Allow important horse-related pages
+Allow: /horses-for-sale
+Allow: /horses-for-sale-uk
+Allow: /warmblood-horses-for-sale
+Allow: /cob-horses-for-sale-uk
+Allow: /thoroughbred-horses-for-sale
+Allow: /dressage-horses-for-sale
+Allow: /jumping-horses-for-sale
+Allow: /competition-horses-for-sale
+Allow: /riding-horses-for-sale
+Allow: /buy-horses-uk
+Allow: /sell-horses-uk
+Allow: /horse-classifieds-uk
+Allow: /horse-dealers-uk
+Allow: /horse-breeders-uk
+
+# Location-based horse pages
+Allow: /horses-for-sale-london
+Allow: /horses-for-sale-manchester
+Allow: /horses-for-sale-birmingham
+Allow: /horses-for-sale-leeds
+Allow: /horses-for-sale-liverpool
+Allow: /horses-for-sale-sheffield
+Allow: /horses-for-sale-edinburgh
+Allow: /horses-for-sale-glasgow
+Allow: /horses-for-sale-cardiff
+Allow: /horses-for-sale-belfast
+
+# Information pages
+Allow: /horse-buying-guide
+Allow: /horse-selling-guide
+Allow: /horse-breed-guide
+Allow: /horse-care-guide
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://findmyhorse.com/sitemap.xml
+
+# Additional sitemaps for different content types
+Sitemap: https://findmyhorse.com/sitemap-horses.xml
+Sitemap: https://findmyhorse.com/sitemap-locations.xml
+Sitemap: https://findmyhorse.com/sitemap-breeds.xml 
